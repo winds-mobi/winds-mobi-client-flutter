@@ -1,0 +1,40 @@
+name: winds_mobi_client
+description: Winds.mobi client
+version: 0.2.0
+
+publish_to: none
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=2.0.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+  equatable: ">=2.0.0 <3.0.0"
+  flutter_bloc: ">=7.1.0 <8.0.0"
+  http: ">=0.13.0"
+  location: ">=4.0.2 <5.0.0"
+  path: ">=1.8.0 <2.0.0"
+  flutter_map: any
+  map: any
+  cached_network_image: any
+  easy_debounce: ">=2.0.0"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  mockito: any
+  build_runner: any
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
