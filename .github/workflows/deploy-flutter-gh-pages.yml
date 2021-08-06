@@ -27,6 +27,6 @@ jobs:
         run: flutter pub get
 
       - name: Deploy to GitHub Pages
-      - uses: erickzanardo/flutter-gh-pages@v6
+        uses: erickzanardo/flutter-gh-pages@v6
         with:
           customArgs: --dart-define="${{ env.MAPBOX_ACCESS_TOKEN }}"
