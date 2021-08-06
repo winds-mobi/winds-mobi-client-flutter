@@ -23,10 +23,8 @@ jobs:
         with:
           flutter-version: '2.2.x'
 
-      - name: Install Flutter package
-        run: flutter pub get
-
       - name: Deploy to GitHub Pages
         uses: erickzanardo/flutter-gh-pages@v6
         with:
-          customArgs: --dart-define="${{ env.MAPBOX_ACCESS_TOKEN }}"
+          customArgs: --dart-define=MAPBOX_ACCESS_TOKEN=${{ env.MAPBOX_ACCESS_TOKEN }}
+          webRenderer: auto
