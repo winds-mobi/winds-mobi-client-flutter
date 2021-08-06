@@ -10,6 +10,8 @@ import 'package:winds_mobi_client/controllers/station_list_bloc.dart';
 import 'package:winds_mobi_client/services/station_service.dart';
 import 'package:winds_mobi_client/widgets/app_bar.dart';
 
+import '../settings.dart';
+
 class MapScreen extends StatefulWidget {
   @override
   MapControllerState createState() {
@@ -163,8 +165,9 @@ class MapControllerState extends State<MapScreen> {
                           Map(
                             controller: controller,
                             builder: (context, x, y, z) {
-                              final url =
-                                  'https://api.mapbox.com/styles/v1/ysavary/ckrxfjdxsb1u717o0d0spgqa0/tiles/256/$z/$x/$y?access_token=pk.eyJ1IjoieXNhdmFyeSIsImEiOiJjam9vdTNmNzAxazhpM3FteWZnMXc1bnI5In0.5gFvQi1_dp4r7H0-OAZLPQ';
+                              final url = 'https://api.mapbox.com/styles/v1/'
+                                  'ysavary/ckrxfjdxsb1u717o0d0spgqa0/tiles/256/$z/$x/$y'
+                                  '?access_token=${Settings.MAPBOX_ACCESS_TOKEN}';
                               return CachedNetworkImage(
                                 imageUrl: url,
                                 fit: BoxFit.cover,
