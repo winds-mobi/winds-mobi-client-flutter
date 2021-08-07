@@ -13,17 +13,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup Java 11
+      - name: Setup Java 8
         uses: actions/setup-java@v1
         with:
-          java-version: '11.x'
+          java-version: '8.x'
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v1
         with:
-          flutter-version: '2.2.x'
+          channel: 'beta'
+          flutter-version: '2.4.x'
 
       - name: Deploy to GitHub Pages
         uses: erickzanardo/flutter-gh-pages@v6
         with:
-          customArgs: --dart-define=MAPBOX_ACCESS_TOKEN=${{ env.MAPBOX_ACCESS_TOKEN }}
+          customArgs: >-
+            --base-href=/winds-mobi-client-flutter/
+            --dart-define=MAPBOX_ACCESS_TOKEN=${{ env.MAPBOX_ACCESS_TOKEN }}
+            --source-maps

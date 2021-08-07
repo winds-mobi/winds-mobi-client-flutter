@@ -1,0 +1,10 @@
+http://localhost:1588 {
+    # Serve pub packages source code for source-maps
+    # route /dev/flutter/.pub-cache/* {
+    #     uri strip_prefix /dev/flutter/.pub-cache
+    #     file_server {
+    #         root /Users/user/dev/flutter/.pub-cache
+    #     }
+    # }
+    file_server
+}
