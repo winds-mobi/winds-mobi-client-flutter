@@ -8,7 +8,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     env:
-      MAPBOX_ACCESS_TOKEN: 'Token'
+      MAPBOX_ACCESS_TOKEN: 'pk.eyJ1IjoieXNhdmFyeSIsImEiOiJja3Mxa3VmcWIwajQ2MzBxbW11OHprYWhzIn0.AGc4Z1JSipyl6WApGZkJhQ'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -27,4 +27,3 @@ jobs:
         uses: erickzanardo/flutter-gh-pages@v6
         with:
           customArgs: --dart-define=MAPBOX_ACCESS_TOKEN=${{ env.MAPBOX_ACCESS_TOKEN }}
-          webRenderer: auto
