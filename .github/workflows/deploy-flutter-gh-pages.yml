@@ -16,13 +16,13 @@ jobs:
       - name: Setup Java 8
         uses: actions/setup-java@v1
         with:
-          java-version: '8.x'
+          java-version: 8.x
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v1
         with:
-          channel: 'beta'
-          flutter-version: '2.4.x'
+          channel: beta
+          flutter-version: 2.4.0-4.2.pre
 
       - name: Deploy to GitHub Pages
         uses: erickzanardo/flutter-gh-pages@v6

@@ -31,6 +31,9 @@
 .pub/
 /build/
 
+# Flutter Version Management (fvm) related
+/.fvm/flutter_sdk
+
 # Web related
 lib/generated_plugin_registrant.dart
 
